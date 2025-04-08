@@ -45,7 +45,7 @@ class AuthController extends Controller {
         if (password_verify($contraseña, $usuario['contraseña'])) {
             session()->set('loggedUser', $usuario['id']);
             session()->set('userName', $usuario['nombre']);
-            return redirect()->to('/control');
+            return redirect()->to('/PagPrincipal');
         } else {
             return redirect()->to('/login')->with('fail', 'Contraseña incorrecta');
         }
@@ -56,7 +56,7 @@ class AuthController extends Controller {
         return redirect()->to('/login')->with('success', 'Sesión cerrada con éxito');
     }
 
-    public function control() {
-        return view('control');
+    public function PagPrincipal() {
+        return view('PagPrincipal');
     }
 }

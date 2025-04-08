@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AVICOLA - Inicio de Sesión</title>
-    <link rel="stylesheet" href="<?= base_url('style.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('login.css') ?>">
 </head>
 <body>
     <div class="container">
         <h1 class="title">AVICOLA</h1>
         
         <div class="logo">
-            <img src="<?= base_url('images/pollo1.png') ?>" alt="Logo Pollo" />
+             <!--<img src="<?= base_url('images/pollo1.png') ?>" alt="" /> -->
         </div>
 
         <div class="form-container">

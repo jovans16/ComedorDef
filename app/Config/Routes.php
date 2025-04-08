@@ -14,6 +14,6 @@ $routes->get('register', 'AuthController::register'); // Mostrar formulario de r
 $routes->post('register', 'AuthController::create'); // Procesar registro
 $routes->get('logout', 'AuthController::logout'); // Cerrar sesión
 
-$routes->get('control', 'AuthController::control');
+$routes->get('PagPrincipal', 'AuthController::PagPrincipal');
 
 //$routes->get('panel', 'PanelController::index'); para el panel
