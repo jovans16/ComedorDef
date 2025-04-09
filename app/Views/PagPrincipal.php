@@ -57,9 +57,12 @@
         <?php endif; ?>
         <!-- agregar botones 0_0 lotes -->
      <div class="form-container"> 
-     <button type="submit" class="formulario-button">Registro de lote de pollos</button>
-     <button type="submit" class="formulario-button">Visualizacion de lotes</button>
-                </div>
+     <button type="submit" class="button1">Registro de lote de pollos</button>
+     </div>
+     
+     <div class="form-container"> 
+     <button type="submit" class="button2">Visualizacion de lotes</button>
+    </div>
   
     </div>
 

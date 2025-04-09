@@ -128,3 +128,38 @@ label #cancel{
     margin-right: 16px;
     vertical-align: middle;
 }
+
+
+.form-container {
+    border-radius: 15px;
+    padding: 50px;
+    width: 350px;         
+    height: 300px;       
+    margin: 0 auto;
+    box-sizing: border-box; 
+}
+
+.button1 {
+    width: 200%;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.button2 {
+    width: 200%;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    
+}
