@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AVICOLA</title>
-    <link rel="stylesheet" href="<?= base_url('Principal.css') ?>"> <!-- Referencia a los estilos -->
+    <link rel="stylesheet" href="<?= base_url('Lote.css') ?>"> <!-- Referencia a los estilos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 
@@ -40,24 +40,41 @@
         </ul>
         <div class="contacto-info">
             <img src="<?= base_url('/pollo1.png') ?>" class="menu-icons" alt="Contacto">
-            <p>Línea de contacto</p>
+            <p>Linea de contacto</p>
             <p>2311442661</p>
         </div>
     </div>
 
     <!-- Panel principal -->
     <div class="content">
-        <h1>Bienvenido al panel de control</h1>
+        <h1>Registro de lote de pollos</h1>
         
         <?php if (isset($view_content)): ?>
             <?= $view_content ?>
         <?php endif; ?>
 
-        <!-- Botones para lotes -->
-        <div class="form-container">
-            <a href="<?= site_url('registroLot') ?>" class="button1">Registro de lote de pollos</a>
-            <button type="button" class="button2" onclick="location.href='visualizacionLotes'">Visualización de lotes</button>
-        </div>
+        <form action="<?= site_url('/guardarLote') ?>" method="POST"> 
+            <div class="form-container">
+                <p>Número de lote</p>
+                <input type="number" name="lote" class="form-input" placeholder="Ingrese el número de lote" required>
+                
+                <p>Fecha de ingreso</p>
+                <input type="date" name="fecha" class="form-input" required>
+                
+                <p>Cantidad de pollos en el lote</p>
+                <input type="number" name="cantidad" class="form-input" placeholder="Ingrese la cantidad de pollos en el lote" required>
+                
+                <p>Peso promedio inicial</p>
+                <input type="number" name="peso_inicial" class="form-input" placeholder="Ingrese el peso inicial KG" required>
+                
+                <button type="submit" class="formulario-button">Guardar</button>
+                <?php if(session()->has('success')): ?>
+                    <div class="alert alert-success">
+                        <?= session('success') ?>
+                    </div>
+                    <?php endif; ?>
+            </div>
+        </form>
     </div>
 </body>
 

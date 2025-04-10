@@ -59,4 +59,6 @@ class AuthController extends Controller {
     public function PagPrincipal() {
         return view('PagPrincipal');
     }
+
+    
 }

@@ -136,33 +136,54 @@ label #cancel{
     width: 350px;         
     height: 300px;       
     margin: 0 auto;
+    box-sizing: border-box; 
 }
 
-.button1 {
+/*para lo de mas */
+
+.form-container {
+    border-radius: 15px;
+    padding: 50px;
+    width: 350px;         
+    height: 300px;       
+    margin: 0 auto;
+}
+
+.form-input {
     width: 200%;
     padding: 10px;
     border-radius: 20px;
-    margin: 100px;
+    margin: 0px;
     background-color: #FFFFFF;
     font-size: 1rem;
     cursor: pointer;
     text-decoration: none;
     display: block;
-    text-align: center;
+    text-align: left;
     margin-left: -150px;
 }
 
-.button2 {
-    width: 200%;
+.formulario-button {
+    width: 100%;
     padding: 10px;
     border-radius: 20px;
-    margin: 100px;
-    background-color: #FFFFFF;
+    background-color: blue;
+    color: #FFFFFF;
     font-size: 1rem;
     cursor: pointer;
+    margin-bottom: 15px;
     text-decoration: none;
     display: block;
     text-align: center;
-    margin-left: -150px;
-    
+    margin: 50px;
+    margin-left: -10px;
+}
+
+.alert-success {
+    margin-top: 15px; 
+    padding: 10px; 
+    background-color: #d4edda; 
+    color: #155724; 
+    border: 1px solid #c3e6cb; 
+    border-radius: 4px;
 }
