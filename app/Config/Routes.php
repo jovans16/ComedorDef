@@ -21,3 +21,10 @@ $routes->get('registroLot', 'LoteController::registroLot');
 $routes->post('guardarLote', 'LoteController::guardarLote');
 
 //$routes->get('panel', 'PanelController::index'); para el panel
+
+//rutas para reportes
+$routes->get('Reportes', 'ReportesController::Reportes');
+
+
+//cerrar sesion
+$routes->get('/logout', 'Auth::logout');

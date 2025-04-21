@@ -18,8 +18,19 @@
     </label>
 
     <div class="sidebar">
+        <!-- Seccion para mostrar el usuario en la barra -->
+        <div class="user-info">
+            <?php if(session()->has('usuario_nombre')): ?>
+                <p>¡Bienvenido!</p>
+                <p class="username"><?= session()->get('usuario_nombre') ?></p>
+            <?php else: ?>
+                <p>¡Bienvenido!</p>
+                <p class="username">Usuario</p>
+            <?php endif; ?>
+        </div>
+
         <ul>
-            <li><a href="<?= base_url('/gestion') ?>">
+            <li><a href="<?= base_url('/PagPrincipal') ?>">
                     <img src="<?= base_url('/pollo1.png') ?>" alt="Gestión" class="menu-icon">Gestión de aves
                 </a></li>
             <li><a href="<?= base_url('/control') ?>">
@@ -28,8 +39,8 @@
             <li><a href="<?= base_url('/notificacion') ?>">
                     <img src="<?= base_url('/pollo1.png') ?>" alt="Notificaciones" class="menu-icon">Notificaciones
                 </a></li>
-            <li><a href="<?= base_url('/report') ?>">
-                    <img src="<?= base_url('/pollo1.png') ?>" alt="Reportes" class="menu-icon">Reportes
+            <li><a href="<?= base_url('/Reportes') ?>">
+                    <img src="<?= base_url('/report.png') ?>" alt="Reportes" class="menu-icon">Reportes
                 </a></li>
             <li><a href="<?= base_url('/manual') ?>">
                     <img src="<?= base_url('/pollo1.png') ?>" alt="Manual" class="menu-icon">Manual del dispositivo
@@ -42,6 +53,13 @@
             <img src="<?= base_url('/pollo1.png') ?>" class="menu-icons" alt="Contacto">
             <p>Línea de contacto</p>
             <p>2311442661</p>
+        </div>
+        
+        <!-- Botón de cierre de sesión -->
+        <div class="logout-section">
+            <a href="<?= base_url('/logout') ?>" class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i> Cerrar sesión
+            </a>
         </div>
     </div>
 

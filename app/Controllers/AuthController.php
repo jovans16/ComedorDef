@@ -7,6 +7,12 @@ use CodeIgniter\Controller;
 
 class AuthController extends Controller {
     
+    protected $session;
+
+    public function __construct() {
+        $this->session = \Config\Services::session();
+    }
+    
     public function register() {
         return view('register');
     }
@@ -43,14 +49,18 @@ class AuthController extends Controller {
         }
 
         if (password_verify($contraseña, $usuario['contraseña'])) {
-            session()->set('loggedUser', $usuario['id']);
-            session()->set('userName', $usuario['nombre']);
+            $sessionData = [
+                'usuario_id' => $usuario['id'],
+                'usuario_nombre' => $usuario['nombre'],
+                'logged_in' => TRUE
+            ];
+            $this->session->set($sessionData);
             return redirect()->to('/PagPrincipal');
         } else {
             return redirect()->to('/login')->with('fail', 'Contraseña incorrecta');
         }
     }
-
+    
     public function logout() {
         session()->destroy();
         return redirect()->to('/login')->with('success', 'Sesión cerrada con éxito');
@@ -60,5 +70,8 @@ class AuthController extends Controller {
         return view('PagPrincipal');
     }
 
+    public function Reportes() {
+        return view('Reportes');
+    }
     
 }

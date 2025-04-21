@@ -187,3 +187,43 @@ label #cancel{
     border: 1px solid #c3e6cb; 
     border-radius: 4px;
 }
+/*usuario en barra lateral*/
+.user-info {
+    padding: 20px 15px;
+    background: #063146;
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.user-info p {
+    margin: 5px 0;
+}
+
+.user-info .username {
+    font-weight: bold;
+    font-size: 18px;
+    color: #FFDC51;
+}
+
+/* Estilos para el botón de cerrar sesión */
+.logout-section {
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.logout-btn {
+    display: block;
+    background: #e74c3c;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.logout-btn:hover {
+    background: #c0392b;
+}
